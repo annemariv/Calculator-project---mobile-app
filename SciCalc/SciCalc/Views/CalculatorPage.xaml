@@ -39,7 +39,7 @@
                 </Label.FormattedText>
             </Label>
         </Frame>
-
+        
         <!--Answer Row-->
         <Grid
             ColumnDefinitions="Auto,*"

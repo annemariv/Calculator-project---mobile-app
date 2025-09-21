@@ -1,7 +1,9 @@
 ﻿using SciCalc.Views;
+#if WINDOWS
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Windows.Graphics;
+#endif
 
 namespace SciCalc
 {
@@ -9,10 +11,12 @@ namespace SciCalc
     {
         const int WindowWidth = 1080;
         const int WindowHeight = 1920;
+
         public App()
         {
             InitializeComponent();
 
+#if WINDOWS
             Microsoft.Maui.Handlers.WindowHandler.Mapper.AppendToMapping(nameof(IWindow), (handler, view) =>
             {
                 var mauiWindow = handler.VirtualView;
@@ -24,8 +28,11 @@ namespace SciCalc
                 appWindow.Resize(new SizeInt32(WindowWidth, WindowHeight));
             });
 
+#endif
+
             MainPage = new CalculatorPage();
         }
+
 
         //protected override Window CreateWindow(IActivationState? activationState)
         //{
