@@ -65,10 +65,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Services\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Compile Update="Views\PlanetPage.xaml.cs">
 	    <DependentUpon>PlanetPage.xaml</DependentUpon>
 	  </Compile>
