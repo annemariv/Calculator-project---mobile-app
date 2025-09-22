@@ -4,6 +4,8 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using MauiPlanets.Views;
+
 namespace MauiPlanets
 {
     public partial class App : Application
@@ -28,11 +30,14 @@ namespace MauiPlanets
 			appWindow.Resize(new SizeInt32(WindowWidth, WindowHeight));
             #endif
             });
+
+            MainPage = new StartPage();
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+        //protected override Window CreateWindow(IActivationState? activationState)
+        //{
+        //    return new Window(new AppShell());
+        //}
+
     }
 }
