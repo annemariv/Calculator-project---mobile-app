@@ -34,7 +34,17 @@ public partial class StartPage : ContentPage
         parenAnimation.Add(0.7, 0.9, new Animation(v =>
         imgNeptune.Opacity = v, 0, 1, Easing.CubicIn));
 
+        //intro box
+        parenAnimation.Add(0.7, 1, new Animation(v 
+            => imgIntro.Opacity = v, 0, 1, Easing.CubicIn
+        ));
+
         parenAnimation.Commit(this, "TransitionAnimation", 16, 3000, null, null);
 
     }
+
+    //vaadete vahel liikumiseks
+    async void ExploreNow_Clicked(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new PlanetPage());
+    
 }

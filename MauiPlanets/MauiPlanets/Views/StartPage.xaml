@@ -76,6 +76,40 @@
         </Image>
     
         <!--Intro box-->
+        <Border x:Name="imgIntro" Opacity="0"
+                Padding="24,32"
+                BackgroundColor="{StaticResource FrameBackgroundColor}"
+                Stroke="{StaticResource BorderColor}"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Margin="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="24"></RoundRectangle>
+                
+            </Border.StrokeShape>
+
+            <VerticalStackLayout Spacing="16">
+                <Label HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Style="{StaticResource IntroPageHeaderStyle}"
+                       Text="Hello!">                    
+                </Label>
+                <Label HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"
+                       Style="{StaticResource IntroPageHeaderStyle}"
+                       Text="Want to know and explain all things about the planets in the solar system">                    
+                </Label>
+
+                <Button HorizontalOptions="Center"
+                        Margin="0,12,0,6" 
+                        Style="{StaticResource ButtonStyle}"
+                        Text="Explore Now"
+                        Clicked="ExploreNow_Clicked"></Button>
+                
+            </VerticalStackLayout>
+            
+        </Border>
     
     
     </Grid>
