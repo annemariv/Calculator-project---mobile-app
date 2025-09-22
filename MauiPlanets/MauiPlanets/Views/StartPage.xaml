@@ -3,10 +3,80 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiPlanets.Views.StartPage"
              Title="Start">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#666" Offset="0.0"></GradientStop>
+            <GradientStop Color="#000" Offset="1.0"></GradientStop>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <Grid>
+        <Image x:Name="imgEarth" Opacity="0" Source="earth.png" 
+               VerticalOptions="Start" HorizontalOptions="Center"
+               TranslationX="-48"
+               TranslationY="148"
+               WidthRequest="96"
+               HeightRequest="96">
+        </Image>
+        
+        <Image x:Name="imgJupiter" Opacity="0" Source="jupiter.png" 
+               VerticalOptions="Center" HorizontalOptions="Start"
+               TranslationX="-100"
+               TranslationY="-64"
+               WidthRequest="200"
+               HeightRequest="200">
+        </Image>
+        
+        <Image x:Name="imgSaturn" Opacity="0" Source="saturn.png" 
+               VerticalOptions="Center" HorizontalOptions="Center"
+               TranslationX="32"
+               TranslationY="76"
+               WidthRequest="300"
+               HeightRequest="300">
+        </Image>
+        
+        <Image x:Name="imgMars" Opacity="0" Source="mars.png" 
+               VerticalOptions="Start" HorizontalOptions="Start"
+               TranslationX="-100"
+               TranslationY="96"
+               WidthRequest="140"
+               HeightRequest="140">
+        </Image>
+        
+        <Image x:Name="imgMercury" Opacity="0" Source="mercury.png" 
+               VerticalOptions="Start" HorizontalOptions="Center"
+               TranslationX="18"
+               TranslationY="72"
+               WidthRequest="66"
+               HeightRequest="66">
+        </Image>
+        
+        <Image x:Name="imgVenus" Opacity="0" Source="venus.png" 
+               VerticalOptions="Center" HorizontalOptions="End"
+               TranslationX="100"
+               TranslationY="-72"
+               WidthRequest="200"
+               HeightRequest="200">
+        </Image>
+
+        <Image x:Name="imgUranus" Opacity="0" Source="uranus.png" 
+               VerticalOptions="Center" HorizontalOptions="End"
+               TranslationX="-120"
+               TranslationY="-72"
+               WidthRequest="200"
+               HeightRequest="200">
+        </Image>
+        
+        <Image x:Name="imgNeptune" Opacity="0" Source="neptune.png" 
+               VerticalOptions="Start" HorizontalOptions="End"
+               TranslationX="100"
+               TranslationY="-72"
+               WidthRequest="200"
+               HeightRequest="200">
+        </Image>
+    
+        <!--Intro box-->
+    
+    
+    </Grid>
 </ContentPage>
